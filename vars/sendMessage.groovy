@@ -75,7 +75,8 @@ def call(Map params = [:]) {
                         response = httpRequest(
                             url: env.TOPICS_MAPPING_CONFIG_URL,
                             quiet: true,
-                            consoleLogResponseBody: false
+                            consoleLogResponseBody: false,
+                            ignoreSslErrors: true
                         )
                     } catch(e) {
                         echo "Error: Failed to fetch topics mapping from ${env.TOPICS_MAPPING_CONFIG_URL}"

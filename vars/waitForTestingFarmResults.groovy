@@ -54,7 +54,8 @@ done
         httpMode: 'GET',
         url: "${apiUrl}",
         validResponseCodes: '200',
-        quiet: true
+        quiet: true,
+        ignoreSslErrors: true
     )
     def contentJson = new JsonSlurperClassic().parseText(response.content)
     return contentJson

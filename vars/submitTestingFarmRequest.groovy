@@ -49,7 +49,8 @@ def httpPost(url, payload) {
         httpMode: 'POST',
         requestBody: "${payload}",
         url: "${url}",
-        validResponseCodes: '200'
+        validResponseCodes: '200',
+        ignoreSslErrors: true
     )
     def contentJson = Utils.jsonStringToMap(response.content)
     return contentJson

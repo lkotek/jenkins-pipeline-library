@@ -57,6 +57,7 @@ def call(Map params = [:]) {
             contentType: 'APPLICATION_JSON',
             validResponseCodes: '200',
             consoleLogResponseBody: false,
+            ignoreSslErrors: true,
             requestBody: """
                 {
                     "decision_context": "${decisionContext}",
